@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CMC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        // Search input
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search ..." aria-label="Search" aria-describedby="basic-addon1" id="search" onkeyup="search()">
+        </div>
+        // CC table conatins information from coinmarketcap.com about cryptocurrencies 
+        <div class="table-responsive">
+            <table class="table table-bordered table-stripd" id="cc">
+                <tr class="header">
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>SYMBOL</th>
+                    <th>PRICE</th>
+                    <th>MARKET CAP</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    // render file is responsible for fetching data and renders them within the cc table using jquery
+    <script src="render.js"></script>
+    // search file is contais the search function written in javascript
+    <script src="search.js"></script>
+</body>
+</html>
